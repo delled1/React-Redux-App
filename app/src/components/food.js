@@ -1,13 +1,23 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { connect } from "react-redux";
 import {fetchFood} from "../actions/food"
+import "./food.css"
 
 
 
 const Food =  (props) => {
+    // console.log(props)
+
+    useEffect(() => {
+        // console.log(props)
+        fetchFood();
+    }, [])
+
     return (
-        <div>
+        <div className="food">
         <h1>{props.title}</h1>
+        <img className="foodImage" src={props.foodPic} alt="A burger" />
+        <br/>
         <button onClick={props.fetchFood}>Get New Image</button>
         </div>
     )
@@ -17,10 +27,12 @@ const Food =  (props) => {
 //Connect the component to the Redux store
 
 const mapStateToProps = (state) => {
+
+
     return {
         title: state.title,
         isFetching: state.isFetching,
-        image: state.foodPic,
+        foodPic: state.foodPic,
         error: state.error
     }
 }

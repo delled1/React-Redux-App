@@ -1,5 +1,5 @@
     const initialState = {
-        title: "FOOD IS GOOD",
+        title: "BURGERS ARE GOOD",
         ifFetching: false,
         foodPic: "",
         error: ""
@@ -11,9 +11,9 @@
                 return{
                     ...state,
                     isFetching: true,
-                    
+
                 }
-            case "FETCHING_FOOD_SUCESSS":
+            case "FETCHING_FOOD_SUCCESS":
                 return{
                     ...state,
                     isFetching: false,
