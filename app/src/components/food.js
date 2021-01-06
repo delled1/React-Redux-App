@@ -9,9 +9,9 @@ const Food =  (props) => {
     // console.log(props)
 
     useEffect(() => {
-        // console.log(props)
-        fetchFood();
-    }, [])
+        console.log(props)
+        props.fetchFood();
+    }, [fetchFood])
 
     return (
         <div className="food">
