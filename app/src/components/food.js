@@ -18,7 +18,7 @@ const Food =  (props) => {
         <h1>{props.title}</h1>
         <img className="foodImage" src={props.foodPic} alt="A burger" />
         <br/>
-        <button onClick={props.fetchFood}>Get New Image</button>
+        <button className="button" onClick={props.fetchFood}>Get New Image</button>
         </div>
     )
 }

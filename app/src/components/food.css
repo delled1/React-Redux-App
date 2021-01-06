@@ -9,4 +9,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: red;
+}
+
+.button {
+  margin: 5% 0;
+  color: red;
+  background-color: yellow;
+  border: solid black 1px;
 }
