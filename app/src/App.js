@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Food from "./components/food"
 
-function App() {
+function App(props) {
+  console.log()
   return (
     <div className="App">
       <Food />

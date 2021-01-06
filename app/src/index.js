@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore} from "redux"
+import {createStore, applyMiddleware} from "redux"
 import {Provider} from "react-redux"
 import {logger} from "redux-logger"
+import {appReducer} from "./reducers/index"
 
-const store = createStore();
 
+//Create the Store
+const store = createStore(appReducer, applyMiddleware(logger));
+
+//Provider the store
 ReactDOM.render(
   <Provider store={store}>
     <App />
