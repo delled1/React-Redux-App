@@ -1,0 +1,20 @@
+.foodImage {
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+}
+
+.food {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+.button {
+  margin: 5% 0;
+  color: red;
+  background-color: yellow;
+  border: solid black 1px;
+}
